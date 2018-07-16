@@ -10,7 +10,6 @@
 
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import Event from '../event.vue'
 import Timeline from '../timeline.vue'
 
 Vue.use(TurbolinksAdapter)
@@ -18,9 +17,6 @@ Vue.use(TurbolinksAdapter)
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: '#app',
-    // data: {
-    //   message: "Can you say hello?"
-    // },
     components: { Timeline }
   })
 
