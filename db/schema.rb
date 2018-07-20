@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2018_07_15_084434) do
   enable_extension "plpgsql"
 
   create_table "timelines", force: :cascade do |t|
+    t.text "event"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
