@@ -1,4 +1,9 @@
 class TimelinesController < ApplicationController
+
+  def index
+    @timelines = Timeline.all
+  end
+
   def create
     @timeline = Timeline.new(timeline_params)
     if @timeline.save
