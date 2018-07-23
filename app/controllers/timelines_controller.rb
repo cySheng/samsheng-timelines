@@ -2,6 +2,7 @@ class TimelinesController < ApplicationController
 
   def index
     @timelines = Timeline.all
+    @timeline = Timeline.new
   end
 
   def create
@@ -10,8 +11,7 @@ class TimelinesController < ApplicationController
       flash[:success] = "Timeline successfully created"
       redirect_to timelines_path
     else
-      flash[:error] = "Error #{@timeline.errors.messages}"
-      redirect_to new_timeline_path
+      render "index"
     end
   end
 
