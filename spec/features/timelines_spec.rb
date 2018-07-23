@@ -12,5 +12,5 @@ RSpec.feature "Timeline", type: :feature do
       expect(page).to have_content "First Outing"
     }.to change(Timeline.all, :count).by(1)
   end
-
+  
 end
