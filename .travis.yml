@@ -17,6 +17,7 @@ install:
   - node --version
   - npm --version
   - yarn install
+  - rake db:setup
 test:
   adapter: postgresql
   database: travis_ci_test
