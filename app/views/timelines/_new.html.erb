@@ -1,0 +1,14 @@
+<%= form_with model: timeline do |f| %>
+
+  <% if timeline.errors.any? %>
+    <div id="error_explanation">
+      <% timeline.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :event %>
+  <%= f.submit "Create Timeline" %>
+<% end %>

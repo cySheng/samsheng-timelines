@@ -1,4 +1,7 @@
 <div id='app'>
+  <%= render "new", timeline: @timeline %>
+
+  <%= render partial: "timeline", collection: @timelines %>
   <Timeline>
     <Event/>
   </Timeline>

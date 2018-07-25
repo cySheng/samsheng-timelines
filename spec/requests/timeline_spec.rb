@@ -11,7 +11,9 @@ RSpec.describe "Timeline", type: :request do
         post timelines_path, params: { timeline: timeline_params } 
       }.to change(Timeline.all, :count).by(1)
       
-      # expect(response.body).to include("Timeline successfully created")
+      follow_redirect!
+
+      expect(response.body).to include("Timeline successfully created")
     end
   end
 
@@ -23,8 +25,7 @@ RSpec.describe "Timeline", type: :request do
         post timelines_path, params: { timeline: timeline_params } 
       }.to_not change(Timeline.all, :count)
 
-      # expect(response.body).to include("Error")
-      # expect(response.body).to include("event cannot be empty")
+      # expect(response.body).to include("Event can't be blank")
     end
   end
 end
