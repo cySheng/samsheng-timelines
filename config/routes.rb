@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  # resources :timeline
+  resources :timelines, only: [:create, :index]
   root "timelines#index"
 end
